@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<title> Html Assignment </title>
+<h3>Registration form</h3>
+
+
+<table border="1">
+<tr>
+<th>Name:</th>
+<td><input type="text" name="name" placeholder="Your name" required pattern="([A-Z][A-Za-z]+)([ ][A-Z][A-Za-z ]+)*" value=""  title="Enter correct name" onblur="check(this)" /></td>
+</tr>
+<tr>
+<th>ID:</th>
+<td><input type="text" name="name" placeholder ="Your ID" required pattern="([A-Z]{1}\d{6})"value="" title="Enter correct ID" onblur="check(this)"/></td>
+</tr>
+<tr>
+<th>Gender:</th>
+<td><input type="radio" name="gender" value="Male" checked="true" />Male
+              <input type="radio" name="gender" value="Female" />Female </td>
+</tr>
+<tr>
+<th>Age:</th>
+<td> <input type="number" size="3" name="age" min="18" max="60" value="21" required placeholder="18 to 60" </td>
+</tr>
+<tr>
+<th>Location:</th>
+<td> <select name="CityOption" onChange="alert(this.value)">
+                <option value="veg">Mumbai</option>
+                <option value="nonveg">Pune</option>
+				<option value="hyd">Hyderabad</option>
+				<option value="banglr">Bangalore</option>
+				<option value="noida">Noida</option>
+				
+           </select> </td>
+</tr>
+<tr>
+<th>Mobile:</th>
+<td><input type="text" name="name" placeholder="Your mobile No:" required pattern="([7-9]{1}[0-9]{9})"value="" title="Enter correct Phone number" onblur="check(this)"/> </td>
+</tr>
+</table>
+<br>
+<br>
+<button type="button" onclick="alert('Successfully submitted')"> Submit</button>
