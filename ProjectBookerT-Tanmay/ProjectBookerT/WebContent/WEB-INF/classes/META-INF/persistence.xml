@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0"
+	xmlns="http://java.sun.com/xml/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence 
+http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+
+	<persistence-unit name="movie_entity">
+		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+		<class>com.del.bean.Login</class>
+		<class>com.del.bean.Registration</class>
+		<class>com.del.bean.Location</class>
+		<class>com.del.bean.Theatre</class>
+		<class>com.del.bean.Movie</class>
+		<class>com.del.bean.Seat</class>
+		<class>com.del.bean.ShowTime</class>
+		<class>com.del.bean.Booking</class>
+		<class>com.del.bean.MovieSeats</class>
+		<properties>
+			<property name="javax.persistence.jdbc.driver"
+				value="oracle.jdbc.driver.OracleDriver" />
+			<property name="javax.persistence.jdbc.url"
+				value=" jdbc:oracle:thin:@localhost:1521:orcl" />
+			<property name="javax.persistence.jdbc.user"
+				value="system" />
+			<property name="javax.persistence.jdbc.password"
+				value="system" />
+			<property name="hibernate.dialect"
+				value=" org.hibernate.dialect.OracleDialect" />
+			<property name="hibernate.hbm2ddl.auto" value="update" />
+			<property name="hibernate.show_sql" value="true" />
+			<property name="provider"
+				value="org.hibernate.ejb.HibernatePersistence" />
+		</properties>
+	</persistence-unit>
+</persistence>
